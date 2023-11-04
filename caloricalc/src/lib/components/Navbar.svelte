@@ -4,7 +4,7 @@
 	</div>
 	<div class="flex-none">
 		<ul class="menu menu-horizontal px-1">
-			<li><a href="/about">About</a></li>
+			<li><a href="/foods">Foods</a></li>
 		</ul>
 	</div>
 </div>
