@@ -17,6 +17,7 @@
 	<table class="table table-zebra">
 		<thead>
 			<tr>
+                <th>ID</th>
 				<th>Name</th>
 				<th>Calories</th>
 				<th>Protein</th>
@@ -30,14 +31,15 @@
 		<tbody>
 			{#each foods as food}
 				<tr>
+                    <td>{food.id}</td>
 					<td>{food.name}</td>
-					<td>{food.calories}</td>
-					<td>{food.proteins}</td>
-					<td>{food.carbohydrates}</td>
-					<td>{food.fats}</td>
-					<td>{food.fiber}</td>
-					<td>{food.sugars}</td>
-					<td>{food.salt}</td>
+					<td>{food.calories} kcal</td>
+					<td>{food.proteins} g</td>
+					<td>{food.carbohydrates} g</td>
+					<td>{food.fats} g</td>
+					<td>{food.fiber} g</td>
+					<td>{food.sugars} g</td>
+					<td>{food.salt} g</td>
 				</tr>
 			{/each}
 		</tbody>
