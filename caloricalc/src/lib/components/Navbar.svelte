@@ -5,6 +5,7 @@
 	<div class="flex-none">
 		<ul class="menu menu-horizontal px-1">
 			<li><a href="/foods">Foods</a></li>
+			<li><a href="/recipes">Recipes</a></li>
 			<li><a href="/activities">Activities</a></li>
 		</ul>
 	</div>
