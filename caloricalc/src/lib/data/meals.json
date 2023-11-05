@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Breakfast",
+        "time": "2023-11-05T07:42:22",
+        "recipes": [
+            {
+                "id": 2,
+                "portions": 1
+            }
+        ],
+        "foods" : [
+            {
+                "id": 2,
+                "amount": 200
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Lunch",
+        "time": "2023-11-05T12:56:45",
+        "recipes": [
+            {
+                "id": 1,
+                "portions": 1
+            }
+        ],
+        "foods" : [
+        ]
+    }
+]
