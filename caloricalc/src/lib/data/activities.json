@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Morning walk",
+        "location": "49.2313228N, 16.5925064E",
+        "start": "2023-11-05T08:52:32",
+        "end": "2023-11-05T09:32:45",
+        "type": "walk",
+        "calories": 342
+    },
+    {
+        "id": 2,
+        "name": "Strength training",
+        "location": "49.2145000N, 16.6075053E",
+        "start": "2023-11-05T17:54:46",
+        "end": "2023-11-05T18:49:45",
+        "type": "strength",
+        "calories": 943
+    }
+]

@@ -1,0 +1,40 @@
+[
+    {
+        "id": 1,
+        "name": "Chicken, rice, veggies",
+        "portions": 4,
+        "foods": [
+            {
+                "id": 6,
+                "amount": 500
+            },
+            {
+                "id": 11,
+                "amount": 750
+            },
+            {
+                "id": 17,
+                "amount": 200
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Cheese sandwich",
+        "portions": 1,
+        "foods": [
+            {
+                "id": 1,
+                "amount": 20
+            },
+            {
+                "id": 12,
+                "amount": 50
+            },
+            {
+                "id": 3,
+                "amount": 10
+            }
+        ]
+    }
+]
