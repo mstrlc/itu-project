@@ -1,19 +1,17 @@
 <script>
 	/** @type {import('./$types').PageData} */
-	var foods = [];
 
-	import { onMount } from 'svelte';
+	var foods;
 
-	onMount(async () => {
-		const res = await fetch('/api/foods', {
-			method: 'GET'
-		});
-		var json = await res.json();
-		foods = json.foods;
-	});
+	async function getFoods() {
+        const res = await fetch('/api/foods');
+        const data = await res.json();
+        foods = data;
+};
 </script>
 
-<div class="overflow-x-auto">
+<div>
+	<button class="btn btn-primary" on:click={getFoods}>Load foods</button>
 	<table class="table table-zebra">
 		<thead>
 			<tr>
@@ -29,19 +27,25 @@
 			</tr>
 		</thead>
 		<tbody>
-			{#each foods as food}
-				<tr>
-                    <td>{food.id}</td>
-					<td>{food.name}</td>
-					<td>{food.calories} kcal</td>
-					<td>{food.proteins} g</td>
-					<td>{food.carbohydrates} g</td>
-					<td>{food.fats} g</td>
-					<td>{food.fiber} g</td>
-					<td>{food.sugars} g</td>
-					<td>{food.salt} g</td>
-				</tr>
-			{/each}
+			{#if foods}
+				{#each foods as food}
+					<tr>
+						<td>{food.id}</td>
+						<td>{food.name}</td>
+						<td>{food.calories} kcal</td>
+						<td>{food.proteins} g</td>
+						<td>{food.carbohydrates} g</td>
+						<td>{food.fats} g</td>
+						<td>{food.fiber} g</td>
+						<td>{food.sugars} g</td>
+						<td>{food.salt} g</td>
+					</tr>
+				{/each}
+			{:else}
+			<tr>
+				<td colspan="9">No data</td>
+			</tr>
+			{/if}
 		</tbody>
 	</table>
 </div>
