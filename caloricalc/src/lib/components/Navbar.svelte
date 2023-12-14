@@ -1,3 +1,7 @@
+<script>
+	import Pill from './Pill.svelte';
+</script>
+
 <div class="navbar bg-base-100">
 	<div class="flex-1">
 		<a class="btn btn-ghost normal-case text-xl" href="/">caloriCalc</a>
@@ -7,6 +11,14 @@
 			<li><a href="/foods">Foods</a></li>
 			<li><a href="/recipes">Recipes</a></li>
 			<li><a href="/activities">Activities</a></li>
+			<Pill>directions_run</Pill>
 		</ul>
 	</div>
 </div>
+
+<style>
+	.navbar {
+		background-color: #262070;
+		color: #ffffff;
+	}
+</style>
