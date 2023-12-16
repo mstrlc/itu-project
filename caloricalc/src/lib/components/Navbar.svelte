@@ -11,7 +11,7 @@
 			<li><a href="/foods">Foods</a></li>
 			<li><a href="/recipes">Recipes</a></li>
 			<li><a href="/activities">Activities</a></li>
-			<Pill>directions_run</Pill>
+			<Pill>restaurant</Pill>
 		</ul>
 	</div>
 </div>
