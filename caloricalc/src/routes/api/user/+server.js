@@ -9,3 +9,14 @@ export async function GET({ }) {
         }
     });
 }
+
+export async function PUT({ body }) {
+    const updatedUserData = JSON.parse(body);
+    Object.assign(user, updatedUserData);
+
+    return new Response(JSON.stringify(user), {
+        headers: {
+            'content-type': 'application/json'
+        }
+    });
+}
