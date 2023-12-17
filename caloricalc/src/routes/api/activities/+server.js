@@ -1,53 +1,72 @@
 /** @type {import('./$types').RequestHandler} */
+import { json } from '@sveltejs/kit';
 
-import activities from '$lib/data/activities.json';
+import fs from 'fs/promises'; // Import the file system module
+import path from 'path';
+
+const activitiesFilePath = path.resolve('src/lib/data/activities.json');
 
 export async function GET({ }) {
-    return new Response(JSON.stringify(activities), {
-        headers: {
-            'content-type': 'application/json'
-        }
-    });
+    let activities = await loadActivities();
+    return json(activities);
 }
 
-export async function POST({ body }) {
-    const newActivity = JSON.parse(body);
+export async function POST({ request }) {
+    const data = await request.json();
+    let activities = await loadActivities();
+    let newActivity = {
+        id: activities.length + 1,
+        name: data.name,
+        location: data.location,
+        start: data.start,
+        end: data.end,
+        type: data.type,
+        calories: data.calories,
+    }
     activities.push(newActivity);
-
-    return new Response(JSON.stringify(activities), {
-        headers: {
-            'content-type': 'application/json'
-        }
-    });
+    await saveActivities(activities);
+    return json(activities);
 }
 
-export async function PUT({ params, body }) {
-    const activityId = parseInt(params.id);
-    const updatedActivity = JSON.parse(body);
-
-    const index = activities.findIndex(activity => activity.id === activityId);
-    if (index !== -1) {
-        activities[index] = { ...activities[index], ...updatedActivity };
-    }
-
-    return new Response(JSON.stringify(activities), {
-        headers: {
-            'content-type': 'application/json'
-        }
-    });
+export async function PUT({ request }) {
+    const data = await request.json();
+    let id = parseInt(data.id);
+    let activities = await loadActivities();
+    let activity = activities.find(activity => activity.id == parseInt(id));
+    activity.name = data.name;
+    activity.location = data.location;
+    activity.start = data.start;
+    activity.end = data.end;
+    activity.type = data.type;
+    activity.calories = data.calories;
+    await saveActivities(activities);
+    return json(activities);
 }
 
-export async function DELETE({ params }) {
-    const activityId = parseInt(params.id);
+export async function DELETE({ request }) {
+    const data = await request.json();
+    let id = parseInt(data.id);
+    let activities = await loadActivities();
+    if (id > activities.length) return json(activities);
+    activities.splice(activities.findIndex(activity => activity.id == parseInt(id)), 1);
+    await saveActivities(activities);
+    return json(activities);
+}
 
-    const index = activities.findIndex(activity => activity.id === activityId);
-    if (index !== -1) {
-        activities.splice(index, 1);
+async function loadActivities() {
+    try {
+        const data = await fs.readFile(activitiesFilePath, 'utf-8');
+        return JSON.parse(data);
+    } catch (error) {
+        console.error('Error reading activities file:', error);
+        return [];
     }
+}
 
-    return new Response(JSON.stringify(activities), {
-        headers: {
-            'content-type': 'application/json'
-        }
-    });
+async function saveActivities(activities) {
+    try {
+        await fs.writeFile(activitiesFilePath, JSON.stringify(activities, null, 2), 'utf-8');
+    } catch (error) {
+        console.error('Error writing activities file:', error);
+    }
 }
