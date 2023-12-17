@@ -1,3 +1,5 @@
+<!-- Author: xstrel03
+Date: 17.12.2023 -->
 <script>
 	import { writable, get } from 'svelte/store';
 	import Timeline from './Timeline.svelte';
