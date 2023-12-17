@@ -1,3 +1,5 @@
+import { getFoodCalories } from './foods';
+
 export async function getRecipes() {
     const response = await fetch('/api/recipes', {
         method: 'GET',
@@ -19,6 +21,22 @@ export async function getRecipe(id) {
     let recipe = await response.json();
     recipe = recipe.find(recipe => recipe.id == id);
     return await recipe;
+}
+
+export async function getRecipeCalories(id) {
+    const response = await fetch('/api/recipes', {
+        method: 'GET',
+        headers: {
+            'content-type': 'application/json'
+        }
+    });
+    let recipe = await response.json();
+    recipe = recipe.find(recipe => recipe.id == id);
+    let calories = 0;
+    await Promise.all(recipe.foods.map(async food => {
+        calories += await getFoodCalories(food.id);
+    }));
+    return calories;
 }
 
 export async function createRecipe(name, portions, foods, recipes) {

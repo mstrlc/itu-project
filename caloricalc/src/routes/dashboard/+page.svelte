@@ -31,4 +31,4 @@
 <button on:click={dayMinus} class="btn">&larr;</button>
 <button on:click={dayPlus} class="btn">&rarr;</button>
 
-<Timeline {date} />
+<Timeline class="flex" {date}/>

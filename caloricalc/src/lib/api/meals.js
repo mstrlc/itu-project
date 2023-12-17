@@ -1,3 +1,6 @@
+import { getFoodCalories } from './foods';
+import { getRecipeCalories } from './recipes';
+
 export async function getMeals() {
     const response = await fetch('/api/meals', {
         method: 'GET',
@@ -7,6 +10,37 @@ export async function getMeals() {
     });
 
     return await response.json();
+}
+
+export async function getMealsByDate(date) {
+    const response = await fetch('/api/meals', {
+        method: 'GET',
+        headers: {
+            'content-type': 'application/json'
+        }
+    });
+    let meals = await response.json();
+    meals = meals.filter(meal => meal.time.split("T")[0] == date);
+    return await meals;
+}
+
+export async function getMealCalories(id) {
+    const response = await fetch('/api/meals', {
+        method: 'GET',
+        headers: {
+            'content-type': 'application/json'
+        }
+    });
+    let meal = await response.json();
+    meal = meal.find(meal => meal.id == id);
+    let calories = 0;
+    await Promise.all(meal.foods.map(async food => {
+        calories += await getFoodCalories(food.id);
+    }));
+    await Promise.all(meal.recipes.map(async recipe => {
+        calories += await getRecipeCalories(recipe.id);
+    }));
+    return calories;
 }
 
 export async function getMeal(id) {
