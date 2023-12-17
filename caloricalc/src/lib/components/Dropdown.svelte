@@ -1,3 +1,7 @@
+<!--
+	author: Ondrej Seidl <xseidl06>
+	date : 17.12.2023
+-->
 <div class="dropdown dropdown-hover dropdown-end">
 	<div tabindex="0" role="button" class="material-symbols-outlined"><slot name="icon" /></div>
 	<!-- svelte-ignore a11y-no-noninteractive-tabindex -->

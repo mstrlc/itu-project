@@ -1,3 +1,8 @@
+
+<!--
+	author: Ondrej Seidl <xseidl06>
+	date : 17.12.2023
+-->
 <div class=" w-full h-full bg-base-100 rounded-xl shadow-xl px-4 py-4">
     <div class ="grid grid-cols-2 gap-4 rounded-lg overflow h-full">
         <div class="cnt"><slot name="1"/></div>
