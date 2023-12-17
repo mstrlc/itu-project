@@ -30,27 +30,33 @@
         <div class="label">
             <span class="label-text">Proteins</span>
         </div>
-        <input type="number" bind:value={food.proteins} placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+        value:{food.proteins}
+        <input type="range" min="0" max="100" bind:value={food.proteins} step="0.1" class="range range-info" />
         <div class="label">
             <span class="label-text">Carbohydrates</span>
         </div>
-        <input type="number" bind:value={food.carbohydrates} placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+        value:{food.carbohydrates}
+        <input type="range" min="0" max="100" bind:value={food.carbohydrates} step="0.1" class="range range-info" />
         <div class="label">
             <span class="label-text">Fats</span>
         </div>
-        <input type="number" bind:value={food.fats} placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+        value:{food.fats}
+        <input type="range" min="0" max="100" bind:value={food.fats} step="0.1" class="range range-info" />
         <div class="label">
             <span class="label-text">Fiber</span>
         </div>
-        <input type="number" bind:value={food.fiber} placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+        value:{food.fiber}
+        <input type="range" min="0" max="100" bind:value={food.fiber} step="0.1" class="range range-info" />
         <div class="label">
             <span class="label-text">Sugars</span>
         </div>
-        <input type="number" bind:value={food.sugars} placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+        value:{food.sugars}
+        <input type="range" min="0" max="100" bind:value={food.sugars} step="0.1" class="range range-info" />
         <div class="label">
             <span class="label-text">Salt</span>
         </div>
-        <input type="number" bind:value={food.salt} placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+        value:{food.salt}
+        <input type="range" min="0" max="100" bind:value={food.salt} step="0.1" class="range range-info" />
     </label>
     <button class="btn btn-primary" on:click={handleEditFood}>Edit food</button>
     {/if}
