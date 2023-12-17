@@ -11,7 +11,13 @@
 			<li><a href="/foods">Foods</a></li>
 			<li><a href="/recipes">Recipes</a></li>
 			<li><a href="/activities">Activities</a></li>
-			<Pill>restaurant</Pill>
+			<Pill>
+				<div slot="icon">restaurant</div>
+				<div slot="content">
+					<li><a href="/foods">Foods</a></li>
+					<li><a href="/recipes">Recipes</a></li>
+				</div>
+			</Pill>
 		</ul>
 	</div>
 </div>
