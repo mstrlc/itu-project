@@ -1,44 +1,52 @@
 <script>
     /** @type {import('./$types').PageData} */
-	var activities = [];
+    import { getActivities } from '../../lib/api/activities';
+	var activities;
 
-import { onMount } from 'svelte';
+    import { onMount } from 'svelte';
 
-let selected;
-const type_list = ["walk", "strength"];
-onMount(async () => {
-    const res = await fetch('/api/activities');
-    var json = await res.json();
-    activities = json;
-});
+    // let selected;
+    // const type_list = ["walk", "strength"];
+    
 
-async function SelectType() {
-    const res = await fetch('/api/activities');
-    var json = await res.json();
-    if (selected == "Pick type") {
-        activities = json;
-    } else {
-    activities = json.filter(activity => activity.type == selected);
-    }
-}
+    // async function SelectType() {
+    //     const res = await fetch('/api/activities');
+    //     var json = await res.json();
+    //     if (selected == "Pick type") {
+    //         activities = json;
+    //     } else {
+    //     activities = json.filter(activity => activity.type == selected);
+    //     }
+    // } 
+    onMount(async () => {
+        activities = await getActivities();
+    });
+
+    const navigateToActivityDetail = () => {
+        window.location.href = '/activities/' + activity.id + '/';
+    };
+
+    const navigateToAddActivity = () => {
+        window.location.href = '/activities/add';
+    };
 
 </script>
 
 
 <div class="overflow-x-auto">
-    <select class="select select-bordered w-full max-w-xs" bind:value={selected} on:click={SelectType}>
+    <!-- <select class="select select-bordered w-full max-w-xs" bind:value={selected} on:click={SelectType}>
         <option>Pick type</option>
         {#each type_list as type}
         <option value={type}>
             {type}
         </option>
     {/each}
-      </select>
-	<table class="table table-zebra">
+      </select> -->
+    <button class="btn btn-primary" on:click={navigateToAddActivity}>Add food</button>
+	<table class="table">
 		<thead>
 			<tr>
-                <th>ID</th>
-				<th>Name</th>
+                <th>Picture</th>
 				<th>Location</th>
 				<th>Start</th>
 				<th>End</th>
@@ -48,15 +56,28 @@ async function SelectType() {
 		</thead>
 		<tbody>
             {#if activities}
-                {#each activities as acitvity}
+                {#each activities as activity}
                     <tr>
-                        <td>{acitvity.id}</td>
-                        <td>{acitvity.name}</td>
-                        <td>{acitvity.location}</td>
-                        <td>{acitvity.start}</td>
-                        <td>{acitvity.end}</td>
-                        <td>{acitvity.type}</td>
-                        <td>{acitvity.calories} kcal</td>
+                        <td>
+                          <div class="flex items-center gap-3">
+                            <div class="avatar">
+                              <div class="mask mask-squircle w-12 h-12">
+                                <img src="/" alt="" />
+                              </div>
+                            </div>
+                            <div>
+                              <div class="font-bold">{activity.name}</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>{activity.location}</td>
+                        <td>{activity.time}</td>
+                        <td>{activity.end}</td>
+                        <td>{activity.type}</td>
+                        <td>{activity.calories} kcal</td>
+                        <th>
+                          <button class="btn btn-xs" on:click={navigateToActivityDetail(activity.id)}>Details</button>
+                        </th>
                     </tr>
                 {/each}
             {:else}

@@ -23,20 +23,13 @@
 </script>
 
 <div>
-	<h1>Foods</h1>
 	<button class="btn btn-primary" on:click={navigateToAddFood}>Add food</button>
 	<table class="table">
 		<thead>
 			<tr>
-                <!-- <th>ID</th> -->
+				<th>Picture</th>
 				<th>Name</th>
 				<th>Calories</th>
-				<!-- <th>Protein</th>
-				<th>Carbohydrates</th>
-				<th>Fat</th>
-				<th>Fiber</th>
-				<th>Sugar</th>
-				<th>Salt</th> -->
 			</tr>
 		</thead>
 		<tbody>
@@ -59,20 +52,9 @@
 					  {food.calories}
 					</td>
 					<th>
-					  <button class="btn btn-xs" on:click={navigateToFoodDetail(food.id)}>details</button>
+					  <button class="btn btn-xs" on:click={navigateToFoodDetail(food.id)}>Details</button>
 					</th>
 				</tr>
-					<!-- <tr>
-						<td>{food.id}</td>
-						<td>{food.name}</td>
-						<td>{food.calories} kcal</td>
-						<td>{food.proteins} g</td>
-						<td>{food.carbohydrates} g</td>
-						<td>{food.fats} g</td>
-						<td>{food.fiber} g</td>
-						<td>{food.sugars} g</td>
-						<td>{food.salt} g</td>
-					</tr> -->
 				{/each}
 			{:else}
 			<tr>

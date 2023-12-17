@@ -1,21 +1,27 @@
 <script>
 	/** @type {import('./$types').PageData} */
-
+	import { getRecipes } from '../../lib/api/recipes';
+	import { getFoods } from '../../lib/api/foods';
+	import { onMount } from 'svelte';
 	var recipes;
 	var foods;
 
-	async function getRecipes() {
-		const res = await fetch('/api/recipes');
-		const data = await res.json();
-		recipes = data;
-		const foods_res = await fetch('/api/foods');
-		const foods_data = await foods_res.json();
-		foods = foods_data;
-	}
+	onMount(async () => {
+		recipes = await getRecipes();
+		foods = await getFoods();
+	});
+
+	const navigateToAddRecipe = () => {
+		window.location.href = '/recipes/add';
+	};
+
+	const navigateToRecipeDetail = (id) => {
+		window.location.href = '/recipes/' + id + '/';
+	};
 </script>
 
 <div>
-	<button class="btn btn-primary" on:click={getRecipes}>Load recipes</button>
+	<button class="btn btn-primary" on:click={navigateToAddRecipe}>Add recipe</button>
 	<table class="table">
 		<tbody>
 			{#if recipes}
@@ -60,6 +66,7 @@
 									{/each}
 								{/each}
 							{/if}
+							<button class="btn btn-xl" on:click={navigateToRecipeDetail(recipes.id)}>Details</button>
 						</div>
 					</div>
 				{/each}
