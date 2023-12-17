@@ -22,8 +22,8 @@
         activities = await getActivities();
     });
 
-    const navigateToActivityDetail = () => {
-        window.location.href = '/activities/' + activity.id + '/';
+    const navigateToActivityDetail = (id) => {
+        window.location.href = '/activities/' + id + '/';
     };
 
     const navigateToAddActivity = () => {
@@ -47,9 +47,7 @@
 		<thead>
 			<tr>
                 <th>Picture</th>
-				<th>Location</th>
 				<th>Start</th>
-				<th>End</th>
 				<th>Type</th>
 				<th>Calories</th>
 			</tr>
@@ -70,9 +68,7 @@
                             </div>
                           </div>
                         </td>
-                        <td>{activity.location}</td>
                         <td>{activity.time}</td>
-                        <td>{activity.end}</td>
                         <td>{activity.type}</td>
                         <td>{activity.calories} kcal</td>
                         <th>
