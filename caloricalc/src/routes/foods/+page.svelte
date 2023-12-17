@@ -27,7 +27,6 @@
 	<table class="table">
 		<thead>
 			<tr>
-				<th>Picture</th>
 				<th>Name</th>
 				<th>Calories</th>
 			</tr>
@@ -38,11 +37,6 @@
 				<tr>
 					<td>
 					  <div class="flex items-center gap-3">
-						<div class="avatar">
-						  <div class="mask mask-squircle w-12 h-12">
-							<img src="/" alt="" />
-						  </div>
-						</div>
 						<div>
 						  <div class="font-bold">{food.name}</div>
 						</div>
