@@ -2,9 +2,9 @@
 	export const icon = 'home';
 </script>
 
-<div class="dropdown dropdown-hover dropdown-end">
+<div class="dropdown dropdown-hover dropdown-end dropdown-center">
 	<div tabindex="0" role="button" class=" material-symbols-outlined"><slot name="icon" /></div>
-	<ul tabindex="0" class="dropdown-content z-[0] menu p-0 shadow bg-base-100 rounded-box -translate-y-8 -translate-x-1">
+	<ul tabindex="0" class="dropdown-content z-[0] menu p-0 shadow bg-base-100 rounded-box -translate-y-0 -translate-x-1 w-50">
 		<slot name="content" />
 	</ul>
   </div>
@@ -21,9 +21,7 @@
 	}
 
 	.dropdown-content {
-		background-color: #8b90ff;
-		min-width: auto;
-		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		
 		
 	}
 

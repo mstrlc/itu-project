@@ -6,8 +6,8 @@
 	<div class="flex-1">
 		<a class="btn btn-ghost normal-case text-xl" href="/"><span class="material-symbols-outlined">restaurant</span>caloriCalc</a>
 	</div>
-	<div class="flex-none">
-		<ul class="menu menu-horizontal px-1">
+	<div class="flex-none ">
+		<ul class="menu menu-horizontal px-1 text-base">
 			<li><a href="/foods">Foods</a></li>
 			<li><a href="/recipes">Recipes</a></li>
 			<li><a href="/activities">Activities</a></li>
