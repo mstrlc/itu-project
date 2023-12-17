@@ -2,28 +2,18 @@
 	export let date;
 
 	import { onMount } from 'svelte';
+	import { getActivities } from '../api/activities';
+	import { getMeals } from '../api/meals';
 
 	$: currentDate = $date.toLocaleDateString('sv-SE');
 
 	var activities;
 	var meals;
 
-	onMount(() => {
-		getActivities();
-		getMeals();
+	onMount(async () => {
+		activities = await getActivities();
+		meals = await getMeals();
 	});
-
-	async function getActivities() {
-		const res = await fetch('/api/activities');
-		const data = await res.json();
-		activities = data;
-	}
-
-	async function getMeals() {
-		const res = await fetch('/api/meals');
-		const data = await res.json();
-		meals = data;
-	}
 </script>
 
 <p>{currentDate}</p>
