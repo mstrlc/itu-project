@@ -29,12 +29,13 @@ export async function editUser(name, birthday, weight, height, sex) {
     return await response.json();
 }
 
-export async function createUser(name, portions, foods, Users) {
+export async function createUser( name, birthday, weight, height, sex) {
     let User = {
         name: name,
-        portions: portions,
-        foods: foods || [],
-        Users : Users || [],
+        birthday: birthday,
+        weight: weight || [],
+        height: height,
+        sex: sex
     };
     const response = await fetch('/api/user', {
         method: 'POST',

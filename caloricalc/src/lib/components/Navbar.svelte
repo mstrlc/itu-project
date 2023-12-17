@@ -3,22 +3,21 @@
 </script>
 
 <div class="navbar bg-base-100">
-	<div class="flex-1">
-		<a class="btn btn-ghost normal-case text-xl" href="/"><span class="material-symbols-outlined">restaurant</span>caloriCalc</a>
+	<div class=" navbar-start">
+		<a class="btn btn-ghost normal-case text-xl" href="/dashboard"><span class="material-symbols-outlined">restaurant</span>caloriCalc</a>
 	</div>
-	<div class="flex-none ">
-		<ul class="menu menu-horizontal px-1 text-base">
+	<div class=" navbar-center">
+		<ul class="menu menu-horizontal px-1">
 			<li><a href="/foods">Foods</a></li>
 			<li><a href="/recipes">Recipes</a></li>
+			<li><a href="/meals">Meals</a></li>
+			
 			<li><a href="/activities">Activities</a></li>
-			<Pill>
-				<div slot="icon">restaurant</div>
-				<div slot="content">
-					<li><a href="/foods">Foods</a></li>
-					<li><a href="/recipes">Recipes</a></li>
-				</div>
-			</Pill>
 		</ul>
+	</div>
+	<div class=" navbar-end">
+		<a href="foods"><Pill><div slot="icon">restaurant</div> </Pill></a>
+		<a href="activities"><Pill><div slot="icon">directions_Run</div></Pill></a>
 	</div>
 </div>
 

@@ -7,23 +7,40 @@ import path from 'path';
 const userFilePath = path.resolve('src/lib/data/user.json');
 
 export async function GET({ }) {
-    let user = await loadUser();
+    let user = await loadUsers();
     return json(user);
 }
 
 export async function POST({ request }) {
     const data = await request.json();
-    let user = await loadUser();
-    user.name = data.name;
-    user.birthday = data.birthday;
-    user.weight = data.weight;
-    user.height = data.height;
-    user.sex = data.sex;
-    await saveUser(user);
-    return json(user);
+    let users = await loadUsers();
+    let newuser = {
+        id: users.length + 1,
+        name: data.name,
+        birthday: data.birthday,
+        weight: data.weight || [],
+        height: data.height,
+        sex: data.sex
+    }
+    users.push(newuser);
+    await saveUsers(users);
+    return json(users);
 }
 
-async function loadUser() {
+export async function PUT({ request }) {
+    const data = await request.json();
+    let id = parseInt(data.id);
+    let users = await loadUsers();
+    let user = users.find(user => user.id == parseInt(id));
+    user.name = data.name;
+    user.portions = data.portions;
+    user.foods = data.foods || [];
+    user.users = data.users || [];
+    await saveUsers(users);
+    return json(users);
+}
+
+async function loadUsers() {
     try {
         const data = await fs.readFile(userFilePath, 'utf-8');
         return JSON.parse(data);
@@ -33,7 +50,7 @@ async function loadUser() {
     }
 }
 
-async function saveUser(user) {
+async function saveUsers    (user) {
     try {
         await fs.writeFile(userFilePath, JSON.stringify(user, null, 2), 'utf-8');
     } catch (error) {
