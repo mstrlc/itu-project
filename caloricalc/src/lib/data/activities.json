@@ -1,83 +1,83 @@
 [
-    {
-        "id": 1,
-        "name": "Morning walk",
-        "location": "49.2313228N, 16.5925064E",
-        "start": "2023-11-05T08:52:32",
-        "end": "2023-11-05T09:32:45",
-        "type": "walk",
-        "calories": 342
-    },
-    {
-        "id": 2,
-        "name": "Strength training",
-        "location": "49.2145000N, 16.6075053E",
-        "start": "2023-11-05T17:54:46",
-        "end": "2023-11-05T18:49:45",
-        "type": "strength",
-        "calories": 943
-    },
-    {
-        "id": 3,
-        "name": "Afternoon jog",
-        "location": "49.2313228N, 16.5925064E",
-        "start": "2023-12-16T14:30:00",
-        "end": "2023-12-16T15:15:00",
-        "type": "run",
-        "calories": 450
-    },
-    {
-        "id": 4,
-        "name": "Yoga session",
-        "location": "49.2200000N, 16.6050000E",
-        "start": "2023-12-16T16:00:00",
-        "end": "2023-12-16T17:00:00",
-        "type": "yoga",
-        "calories": 200
-    },
-    {
-        "id": 5,
-        "name": "Cycling adventure",
-        "location": "49.2400000N, 16.5800000E",
-        "start": "2023-12-16T18:30:00",
-        "end": "2023-12-16T19:30:00",
-        "type": "cycling",
-        "calories": 600
-    },
-    {
-        "id": 6,
-        "name": "Swimming Workout",
-        "location": "49.2250000N, 16.6150000E",
-        "start": "2023-12-16T10:00:00",
-        "end": "2023-12-16T11:00:00",
-        "type": "swimming",
-        "calories": 500
-    },
-    {
-        "id": 7,
-        "name": "Nature Hike",
-        "location": "49.2450000N, 16.5900000E",
-        "start": "2023-12-16T13:00:00",
-        "end": "2023-12-16T15:00:00",
-        "type": "hike",
-        "calories": 600
-    },
-    {
-        "id": 8,
-        "name": "Zumba Dance Class",
-        "location": "49.2100000N, 16.6200000E",
-        "start": "2023-12-16T18:00:00",
-        "end": "2023-12-16T19:00:00",
-        "type": "dance",
-        "calories": 400
-    },
-    {
-        "id": 9,
-        "name": "Meditation Session",
-        "location": "49.2350000N, 16.6000000E",
-        "start": "2023-12-16T20:00:00",
-        "end": "2023-12-16T20:30:00",
-        "type": "meditation",
-        "calories": 100
-    }
+  {
+    "id": 1,
+    "name": "Morning walk",
+    "location": "49.2313228N, 16.5925064E",
+    "start": "2023-11-05T08:52:32",
+    "end": "2023-11-05T09:32:45",
+    "type": "walk",
+    "calories": 342
+  },
+  {
+    "id": 2,
+    "name": "Strength training",
+    "location": "49.2145000N, 16.6075053E",
+    "start": "2023-11-05T17:54:46",
+    "end": "2023-11-05T18:49:45",
+    "type": "strength",
+    "calories": 943
+  },
+  {
+    "id": 3,
+    "name": "Afternoon jog",
+    "location": "49.2313228N, 16.5925064E",
+    "start": "2023-12-16T14:30:00",
+    "end": "2023-12-16T15:15:00",
+    "type": "run",
+    "calories": 450
+  },
+  {
+    "id": 4,
+    "name": "Yoga session",
+    "location": "49.2200000N, 16.6050000E",
+    "start": "2023-12-16T16:00:00",
+    "end": "2023-12-16T17:00:00",
+    "type": "yoga",
+    "calories": 200
+  },
+  {
+    "id": 5,
+    "name": "Cycling adventure",
+    "location": "49.2400000N, 16.5800000E",
+    "start": "2023-12-16T18:30:00",
+    "end": "2023-12-16T19:30:00",
+    "type": "cycling",
+    "calories": 600
+  },
+  {
+    "id": 6,
+    "name": "Swimming Workout",
+    "location": "49.2250000N, 16.6150000E",
+    "start": "2023-12-16T10:00:00",
+    "end": "2023-12-16T11:00:00",
+    "type": "swimming",
+    "calories": 500
+  },
+  {
+    "id": 7,
+    "name": "Nature Hike",
+    "location": "49.2450000N, 16.5900000E",
+    "start": "2023-12-16T13:00:00",
+    "end": "2023-12-16T15:00:00",
+    "type": "hike",
+    "calories": 600
+  },
+  {
+    "id": 8,
+    "name": "Zumba Dance Class",
+    "location": "49.2100000N, 16.6200000E",
+    "start": "2023-12-16T18:00:00",
+    "end": "2023-12-16T19:00:00",
+    "type": "dance",
+    "calories": 400
+  },
+  {
+    "id": 9,
+    "name": "Meditation Session",
+    "location": "49.2350000N, 16.6000000E",
+    "start": "2023-12-16T20:00:00",
+    "end": "2023-12-16T20:30:00",
+    "type": "meditation",
+    "calories": 100
+  }
 ]
