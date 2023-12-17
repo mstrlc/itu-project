@@ -1,10 +1,9 @@
 <script>
-	import { writable } from 'svelte/store';
-	import Dashboard from '../../lib/components/Dashboard.svelte';
+	import { writable, get } from 'svelte/store';
+	import Timeline from '../../lib/components/Timeline.svelte';
 
-	// const date = 'Hello';
 	// Create a writable store for the date
-	const date = writable(new Date());
+	let date = writable(new Date());
 
 	function dayPlus() {
 		// Update the date using the set function
@@ -25,9 +24,11 @@
 	}
 </script>
 
-<p class="text-xl">Dashboard</p>
+<div>
+	<div class="text-xl font-bold">Dashboard</div>
+</div>
 
 <button on:click={dayMinus} class="btn">&larr;</button>
 <button on:click={dayPlus} class="btn">&rarr;</button>
 
-<Dashboard {date} />
+<Timeline {date} />
