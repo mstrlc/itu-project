@@ -12,6 +12,36 @@ export async function getMeals() {
     return await response.json();
 }
 
+export async function getMealsMacros(allmeals) {
+    const response = await fetch('/api/meals', {
+        method: 'GET',
+        headers: {
+            'content-type': 'application/json'
+        }
+    });
+    let macros = {
+        calories: 0,
+        protein: 0,
+        carbohydrates: 0,
+        fats: 0,
+        fiber: 0,
+        sugar: 0,
+        salt: 0
+    };
+    await Promise.all(allmeals.map(async meal => {
+        await Promise.all(meal.foods.map(async food => {
+            macros.calories += await getFoodCalories(food.id);
+            macros.protein += await getFoodCalories(food.id);
+            macros.carbohydrates += await getFoodCalories(food.id);
+            macros.fats += await getFoodCalories(food.id);
+            macros.fiber += await getFoodCalories(food.id);
+            macros.sugar += await getFoodCalories(food.id);
+            macros.salt += await getFoodCalories(food.id);
+        }));
+    }));
+    return await macros;
+}
+
 export async function getMealsByDate(date) {
     const response = await fetch('/api/meals', {
         method: 'GET',
