@@ -26,7 +26,16 @@
             values.fiber = Math.floor(Math.random() * 30);
             values.sugar = Math.floor(Math.random() * 50);
             values.salt = Math.floor(Math.random() * 6);
-            console.log(values);
+        });
+
+        afterUpdate(async () => {
+            values.calories = Math.floor(Math.random() * 2500);
+            values.protein = Math.floor(Math.random() * 100);
+            values.carbohydrates = Math.floor(Math.random() * 300);
+            values.fats = Math.floor(Math.random() * 70);
+            values.fiber = Math.floor(Math.random() * 30);
+            values.sugar = Math.floor(Math.random() * 50);
+            values.salt = Math.floor(Math.random() * 6);
         });
     </script>
 
