@@ -1,3 +1,5 @@
+// Author: xstrel03
+// Date: 17.12.2023
 import { getFoodCalories } from './foods';
 
 export async function getRecipes() {

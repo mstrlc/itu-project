@@ -1,3 +1,6 @@
+<!-- Author: xstrel03
+Date: 17.12.2023 -->
+
 <script>
 	import { onMount } from 'svelte';
 	import { getMealCalories } from '../api/meals';

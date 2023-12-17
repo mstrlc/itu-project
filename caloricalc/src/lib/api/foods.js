@@ -1,3 +1,5 @@
+// Author: xstrel03
+// Date: 17.12.2023
 export async function getFoods() {
     const response = await fetch('/api/foods', {
         method: 'GET',

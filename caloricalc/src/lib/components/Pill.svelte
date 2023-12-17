@@ -1,3 +1,6 @@
+<!-- Author: xstrel03
+Date: 17.12.2023 -->
+
 <div role="button" class="pill material-symbols-outlined">
 	<slot name="icon" />
 </div>

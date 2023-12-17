@@ -1,3 +1,6 @@
+<!-- Author: xstrel03
+Date: 17.12.2023 -->
+
 <script>
 	export let date;
 

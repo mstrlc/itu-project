@@ -1,3 +1,5 @@
+// Author: xstrel03
+// Date: 17.12.2023
 export async function getActivities() {
     const response = await fetch('/api/activities', {
         method: 'GET',

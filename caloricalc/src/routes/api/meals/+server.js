@@ -1,3 +1,5 @@
+// Author: xstrel03
+// Date: 17.12.2023
 /** @type {import('./$types').RequestHandler} */
 import { json } from '@sveltejs/kit';
 
