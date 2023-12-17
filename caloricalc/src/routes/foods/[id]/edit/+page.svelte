@@ -30,32 +30,32 @@
         <div class="label">
             <span class="label-text">Proteins</span>
         </div>
-        value:{food.proteins}
+        value:{food.proteins}g
         <input type="range" min="0" max="100" bind:value={food.proteins} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Carbohydrates</span>
         </div>
-        value:{food.carbohydrates}
+        value:{food.carbohydrates}g
         <input type="range" min="0" max="100" bind:value={food.carbohydrates} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Fats</span>
         </div>
-        value:{food.fats}
+        value:{food.fats}g
         <input type="range" min="0" max="100" bind:value={food.fats} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Fiber</span>
         </div>
-        value:{food.fiber}
+        value:{food.fiber}g
         <input type="range" min="0" max="100" bind:value={food.fiber} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Sugars</span>
         </div>
-        value:{food.sugars}
+        value:{food.sugars}g
         <input type="range" min="0" max="100" bind:value={food.sugars} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Salt</span>
         </div>
-        value:{food.salt}
+        value:{food.salt}g
         <input type="range" min="0" max="100" bind:value={food.salt} step="0.1" class="range range-primary" />
     </label>
     <button class="btn btn-primary" on:click={handleEditFood}>Edit food</button>

@@ -31,32 +31,32 @@
         <div class="label">
             <span class="label-text">Proteins</span>
         </div>
-        value: {proteins}
+        value: {proteins}g
         <input type="range" min="0" max="100" bind:value={proteins} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Carbohydrates</span>
         </div>
-        value: {carbohydrates}
+        value: {carbohydrates}g
         <input type="range" min="0" max="100" bind:value={carbohydrates} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Fats</span>
         </div>
-        value: {fats}
+        value: {fats}g
         <input type="range" min="0" max="100" bind:value={fats} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Fiber</span>
         </div>
-        value: {fiber}
+        value: {fiber}g
         <input type="range" min="0" max="100" bind:value={fiber} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Sugars</span>
         </div>
-        value: {sugars}
+        value: {sugars}g
         <input type="range" min="0" max="100" bind:value={sugars} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Salt</span>
         </div>
-        value: {salt}
+        value: {salt}g
         <input type="range" min="0" max="100" bind:value={salt} step="0.1" class="range range-primary" />
     </label>
     <button class="btn btn-primary" on:click={handleCreateFood}>Create food</button>
