@@ -18,7 +18,7 @@ export async function POST({ request }) {
         id: activities.length + 1,
         name: data.name,
         location: data.location,
-        start: data.start,
+        time: data.time,
         end: data.end,
         type: data.type,
         calories: data.calories,
@@ -35,7 +35,7 @@ export async function PUT({ request }) {
     let activity = activities.find(activity => activity.id == parseInt(id));
     activity.name = data.name;
     activity.location = data.location;
-    activity.start = data.start;
+    activity.time = data.time;
     activity.end = data.end;
     activity.type = data.type;
     activity.calories = data.calories;

@@ -21,11 +21,11 @@ export async function getActivity(id) {
     return await activity;
 }
 
-export async function createActivity(name, location, start, end, type, calories) {
+export async function createActivity(name, location, time, end, type, calories) {
     let activity = {
         name: name,
         location: location,
-        start: start,
+        time: time,
         end: end,
         type: type,
         calories: calories
@@ -41,12 +41,12 @@ export async function createActivity(name, location, start, end, type, calories)
     return await response.json();
 }
 
-export async function editActivity(id, name, location, start, end, type, calories) {
+export async function editActivity(id, name, location, time, end, type, calories) {
     let activity = {
         id: id,
         name: name,
         location: location,
-        start: start,
+        time: time,
         end: end,
         type: type,
         calories: calories
