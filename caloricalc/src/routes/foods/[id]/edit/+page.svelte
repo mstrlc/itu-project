@@ -31,32 +31,32 @@
             <span class="label-text">Proteins</span>
         </div>
         value:{food.proteins}
-        <input type="range" min="0" max="100" bind:value={food.proteins} step="0.1" class="range range-info" />
+        <input type="range" min="0" max="100" bind:value={food.proteins} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Carbohydrates</span>
         </div>
         value:{food.carbohydrates}
-        <input type="range" min="0" max="100" bind:value={food.carbohydrates} step="0.1" class="range range-info" />
+        <input type="range" min="0" max="100" bind:value={food.carbohydrates} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Fats</span>
         </div>
         value:{food.fats}
-        <input type="range" min="0" max="100" bind:value={food.fats} step="0.1" class="range range-info" />
+        <input type="range" min="0" max="100" bind:value={food.fats} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Fiber</span>
         </div>
         value:{food.fiber}
-        <input type="range" min="0" max="100" bind:value={food.fiber} step="0.1" class="range range-info" />
+        <input type="range" min="0" max="100" bind:value={food.fiber} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Sugars</span>
         </div>
         value:{food.sugars}
-        <input type="range" min="0" max="100" bind:value={food.sugars} step="0.1" class="range range-info" />
+        <input type="range" min="0" max="100" bind:value={food.sugars} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Salt</span>
         </div>
         value:{food.salt}
-        <input type="range" min="0" max="100" bind:value={food.salt} step="0.1" class="range range-info" />
+        <input type="range" min="0" max="100" bind:value={food.salt} step="0.1" class="range range-primary" />
     </label>
     <button class="btn btn-primary" on:click={handleEditFood}>Edit food</button>
     {/if}

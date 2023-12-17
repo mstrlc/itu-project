@@ -32,32 +32,32 @@
             <span class="label-text">Proteins</span>
         </div>
         value: {proteins}
-        <input type="range" min="0" max="100" bind:value={proteins} step="0.1" class="range range-info" />
+        <input type="range" min="0" max="100" bind:value={proteins} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Carbohydrates</span>
         </div>
         value: {carbohydrates}
-        <input type="range" min="0" max="100" bind:value={carbohydrates} step="0.1" class="range range-info" />
+        <input type="range" min="0" max="100" bind:value={carbohydrates} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Fats</span>
         </div>
         value: {fats}
-        <input type="range" min="0" max="100" bind:value={fats} step="0.1" class="range range-info" />
+        <input type="range" min="0" max="100" bind:value={fats} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Fiber</span>
         </div>
         value: {fiber}
-        <input type="range" min="0" max="100" bind:value={fiber} step="0.1" class="range range-info" />
+        <input type="range" min="0" max="100" bind:value={fiber} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Sugars</span>
         </div>
         value: {sugars}
-        <input type="range" min="0" max="100" bind:value={sugars} step="0.1" class="range range-info" />
+        <input type="range" min="0" max="100" bind:value={sugars} step="0.1" class="range range-primary" />
         <div class="label">
             <span class="label-text">Salt</span>
         </div>
         value: {salt}
-        <input type="range" min="0" max="100" bind:value={salt} step="0.1" class="range range-info" />
+        <input type="range" min="0" max="100" bind:value={salt} step="0.1" class="range range-primary" />
     </label>
     <button class="btn btn-primary" on:click={handleCreateFood}>Create food</button>
 </div>
