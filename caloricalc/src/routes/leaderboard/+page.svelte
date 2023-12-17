@@ -1,8 +1,13 @@
+<!--
+	author: Ondrej Seidl <xseidl06>
+	date : 17.12.2023
+-->
+
 <script>
 	import Layout from '../+layout.svelte';
 	import { getUser, createUser } from '../../lib/api/user';
 	import { onMount } from 'svelte';
-	import ContentLayout from '../../lib/components/content-Layout.svelte';
+	import ContentLayout from '../../lib/components/ContentLayout.svelte';
 	let Users = [];
 	async function loadUsers() {
 		Users = await getUser();
@@ -18,8 +23,8 @@
 </script>
 
 <div class="h-4/5">
-	<button class="btn btn-primary" on:click={loadUsers}>Load Users</button>
-	<button class="btn btn-primary" on:click={sendUser}>createUsers</button>
+	<!-- <button class="btn btn-primary" on:click={loadUsers}>Load Users</button>
+	<button class="btn btn-primary" on:click={sendUser}>createUsers</button> -->
 	<ContentLayout>
 		<div  slot="1" class="overflow-x-auto">
 		<table >

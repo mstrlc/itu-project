@@ -12,7 +12,7 @@
 <style>
     
     .cnt {
-        @apply p-4 bg-white rounded-3xl;
+        @apply p-4 rounded-3xl bg-base-300 shadow-lg ;         
     }
     .cnt:nth-child(n) {
         @apply table table-xs table-pin-rows table-pin-cols;

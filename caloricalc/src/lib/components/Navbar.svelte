@@ -11,8 +11,8 @@
 			<li><a href="/foods">Foods</a></li>
 			<li><a href="/recipes">Recipes</a></li>
 			<li><a href="/meals">Meals</a></li>
-			
 			<li><a href="/activities">Activities</a></li>
+			<li><a href="/leaderboard">Leaderboard</a></li>
 		</ul>
 	</div>
 	<div class=" navbar-end">

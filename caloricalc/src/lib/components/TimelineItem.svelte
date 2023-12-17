@@ -13,7 +13,8 @@
 	});
 </script>
 
-<li>
+<li >
+	<hr class="bg-primary">
 	<div class="timeline-start"><time>{item.time.split('T')[1].slice(0, -3)}</time></div>
 	<div class="timeline-middle">
 		{#if item.location != null}
