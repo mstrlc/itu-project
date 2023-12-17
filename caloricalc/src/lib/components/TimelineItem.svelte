@@ -24,11 +24,12 @@
 		{/if}
 	</div>
 	<div class="timeline-end timeline-box mb-5 mt-5">
-		<div class="text-lg font-bold">{item.name}</div>
 		{#if item.location != null}
+			<a href="/activity/{item.id}" class="text-lg font-bold">{item.name}</a>
 			<div class="text-sm">– {item.calories} kcal</div>
 		{/if}
 		{#if item.location == null}
+			<a href="/meal/{item.id}" class="text-lg font-bold">{item.name}</a>
 			{#await caloriesPromise then calories}
 				<div class="text-sm">+ {calories} kcal</div>
 			{/await}
