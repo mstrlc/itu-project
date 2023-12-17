@@ -1,23 +1,11 @@
+<!-- Author: xnovym00
+Date: 17.12.2023 -->
 <script>
     /** @type {import('./$types').PageData} */
     import { getActivities } from '../../lib/api/activities';
 	var activities;
 
     import { onMount } from 'svelte';
-
-    // let selected;
-    // const type_list = ["walk", "strength"];
-    
-
-    // async function SelectType() {
-    //     const res = await fetch('/api/activities');
-    //     var json = await res.json();
-    //     if (selected == "Pick type") {
-    //         activities = json;
-    //     } else {
-    //     activities = json.filter(activity => activity.type == selected);
-    //     }
-    // } 
     onMount(async () => {
         activities = await getActivities();
     });
@@ -34,14 +22,6 @@
 
 
 <div class="overflow-x-auto">
-    <!-- <select class="select select-bordered w-full max-w-xs" bind:value={selected} on:click={SelectType}>
-        <option>Pick type</option>
-        {#each type_list as type}
-        <option value={type}>
-            {type}
-        </option>
-    {/each}
-      </select> -->
     <button class="btn btn-primary" on:click={navigateToAddActivity}>Add Activity</button>
 	<table class="table">
 		<thead>

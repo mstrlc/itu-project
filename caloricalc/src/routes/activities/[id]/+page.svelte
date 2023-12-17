@@ -1,3 +1,5 @@
+<!-- Author: xnovym00
+Date: 17.12.2023 -->
 <script>
     import { page } from '$app/stores';
     import { getActivity , deleteActivity} from '../../../lib/api/activities';

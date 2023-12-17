@@ -1,14 +1,11 @@
+<!-- Author: xnovym00
+Date: 17.12.2023 -->
 <script>
 	import { onMount } from 'svelte';
 	/** @type {import('./$types').PageData} */
-	import { createFood, deleteFood, editFood, getFood, getFoods } from '../../lib/api/foods';
+	import { getFoods } from '../../lib/api/foods';
 	var foods;
 
-// 	async function getFoods() {
-//         const res = await fetch('/api/foods');
-//         const data = await res.json();
-//         foods = data;
-// };
 	onMount(async () => {
 		foods = await getFoods();
 	});

@@ -1,3 +1,5 @@
+<!-- Author: xnovym00
+Date: 17.12.2023 -->
 <script>
     /** @type {import('./$types').PageData} */
     import { page } from '$app/stores';
