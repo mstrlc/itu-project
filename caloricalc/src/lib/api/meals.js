@@ -12,7 +12,7 @@ export async function getMeals() {
     return await response.json();
 }
 
-export async function getMealsMacros(allmeals) {
+export async function getMealsMacros(date) {
     const response = await fetch('/api/meals', {
         method: 'GET',
         headers: {
@@ -28,6 +28,8 @@ export async function getMealsMacros(allmeals) {
         sugar: 0,
         salt: 0
     };
+    let allmeals = await response.json();
+    allmeals = allmeals.filter(meal => meal.time.split("T")[0] == date);
     await Promise.all(allmeals.map(async meal => {
         await Promise.all(meal.foods.map(async food => {
             macros.calories += await getFoodCalories(food.id);
