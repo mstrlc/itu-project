@@ -18,7 +18,7 @@
 	};
 
 	const navigateToFoodDetail = (id) => {
-		window.location.href = '/foods/${id}';
+		window.location.href = '/foods/' + id + '/';
 	};
 </script>
 

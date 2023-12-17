@@ -1,36 +1,35 @@
 <script>
-    /** @type {import('./$types').PageData} */
-    import { deleteFood, editFood, getFood, getFoods } from '../../../lib/api/foods';
-    let food = getFood(params.id);
+    import { page } from '$app/stores';
+    import { getFood , deleteFood} from '../../../lib/api/foods';
+    import { onMount } from 'svelte';
+
+    var food;
+    onMount(async () => {
+		food = await getFood($page.params.id);
+	});
+
+    const navigateToEditFood = () => {
+        window.location.href = '/foods/' + $page.params.id + '/edit';
+    };
+
+    const handleDeleteFood = async () => {
+        deleteFood($page.params.id);
+        window.location.href = '/foods';
+    };
 </script>
 
 <div>
-    <table class="table">
-		<thead>
-			<tr>
-                <th>ID</th>
-				<th>Name</th>
-				<th>Calories</th>
-				<th>Protein</th>
-				<th>Carbohydrates</th>
-				<th>Fat</th>
-				<th>Fiber</th>
-				<th>Sugar</th>
-				<th>Salt</th>
-			</tr>
-		</thead>
-		<tbody>
-            <tr>
-                <td>{food.id}</td>
-                <td>{food.name}</td>
-                <td>{food.calories} kcal</td>
-                <td>{food.proteins} g</td>
-                <td>{food.carbohydrates} g</td>
-                <td>{food.fats} g</td>
-                <td>{food.fiber} g</td>
-                <td>{food.sugars} g</td>
-                <td>{food.salt} g</td>
-            </tr>
-		</tbody>
-	</table>
+    {#if food}
+    <button class="btn btn-primary" on:click={navigateToEditFood}>Edit food</button>
+    <button class="btn btn-primary" on:click={handleDeleteFood}>Delete food</button>
+    
+    <h1>{food.name}</h1>
+    <p>Calories: {food.calories}</p>
+    <p>Proteins: {food.proteins}</p>
+    <p>Carbohydrates: {food.carbohydrates}</p>
+    <p>Fats: {food.fats}</p>
+    <p>Fiber: {food.fiber}</p>
+    <p>Sugars: {food.sugars}</p>
+    <p>Salt: {food.salt}</p>
+    {/if}
 </div>

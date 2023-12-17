@@ -11,7 +11,7 @@
     let salt = 0;
 
     const handleCreateFood = async () => {
-        createFood(name, calories, proteins, carbohydrates, fats, fiber, sugars, salt)
+        createFood(name, calories, proteins, carbohydrates, fats, fiber, sugars, salt);
         window.location.href = `/foods`;
     };
     
