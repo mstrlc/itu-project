@@ -42,7 +42,7 @@
         </option>
     {/each}
       </select> -->
-    <button class="btn btn-primary" on:click={navigateToAddActivity}>Add food</button>
+    <button class="btn btn-primary" on:click={navigateToAddActivity}>Add Activity</button>
 	<table class="table">
 		<thead>
 			<tr>
