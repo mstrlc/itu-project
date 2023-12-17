@@ -1,4 +1,5 @@
 // Author: xstrel03
+// author: Ondrej Seidl <xseidl06>
 // Date: 17.12.2023
 export async function getUser() {
     const response = await fetch('/api/user', {

@@ -1,4 +1,5 @@
 <!-- Author: xstrel03
+	author: Ondrej Seidl <xseidl06>
 Date: 17.12.2023 -->
 
 <script>
