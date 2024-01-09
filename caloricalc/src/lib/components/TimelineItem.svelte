@@ -29,7 +29,7 @@ Date: 17.12.2023 -->
 	</div>
 	<div class="timeline-end timeline-box mb-5 mt-5">
 		{#if item.location != null}
-			<a href="/activity/{item.id}" class="text-lg font-bold">{item.name}</a>
+			<a href="/activities/{item.id}" class="text-lg font-bold">{item.name}</a>
 			<div class="text-sm">– {item.calories} kcal</div>
 		{/if}
 		{#if item.location == null}

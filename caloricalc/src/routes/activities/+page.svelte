@@ -26,9 +26,10 @@ Date: 17.12.2023 -->
 	<table class="table">
 		<thead>
 			<tr>
-				<th>Start</th>
+				<th>Name</th>
+				<th>Location</th>
 				<th>Type</th>
-				<th>Calories</th>
+                <th>Calories</th>
 			</tr>
 		</thead>
 		<tbody>
