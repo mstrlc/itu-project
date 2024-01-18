@@ -16,8 +16,10 @@ export async function GET({ }) {
 export async function POST({ request }) {
     const data = await request.json();
     let activities = await loadActivities();
+    let len = Object.keys(activities).length
+    console.log('POSTing with id ' + l);
     let newActivity = {
-        id: activities.length + 1,
+        id: activities[len - 1].id + 1,
         name: data.name,
         location: data.location,
         time: data.time,
@@ -48,9 +50,9 @@ export async function PUT({ request }) {
 export async function DELETE({ request }) {
     const data = await request.json();
     let id = parseInt(data.id);
+    console.log('DELETing with id ' + id);
     let activities = await loadActivities();
-    if (id > activities.length) return json(activities);
-    activities.splice(activities.findIndex(activity => activity.id == parseInt(id)), 1);
+    activities.splice(activities.findIndex(activity => activity.id == id), 1);
     await saveActivities(activities);
     return json(activities);
 }
