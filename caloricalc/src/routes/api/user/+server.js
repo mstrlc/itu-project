@@ -22,7 +22,9 @@ export async function POST({ request }) {
         birthday: data.birthday,
         weight: data.weight || [],
         height: data.height,
-        sex: data.sex
+        sex: data.sex,
+        goals: data.goals || [],
+        filters: data.filters || []
     }
     users.push(newuser);
     await saveUsers(users);
@@ -38,6 +40,8 @@ export async function PUT({ request }) {
     user.portions = data.portions;
     user.foods = data.foods || [];
     user.users = data.users || [];
+    user.filters = data.filters || [];
+    user.goals = data.goals || [];
     await saveUsers(users);
     return json(users);
 }
