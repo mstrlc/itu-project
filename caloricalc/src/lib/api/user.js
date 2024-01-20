@@ -20,7 +20,7 @@ export async function getUserGoals() {
         }
     });
     let user = await response.json();
-    return await user.goals;
+    return await user[0].goals;
 }
 
 export async function getUserFilters() {

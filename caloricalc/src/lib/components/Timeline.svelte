@@ -6,7 +6,7 @@ Date: 17.12.2023 -->
 
 	import { onMount } from 'svelte';
 	import { getActivities } from '../api/activities';
-	import { getMeals, getMealsMacros } from '../api/meals';
+	import { getMeals } from '../api/meals';
 	import TimelineItem from './TimelineItem.svelte';
 
 	$: currentDate = $date.toLocaleDateString('sv-SE');
