@@ -10,7 +10,7 @@ Date: 19.1.2023 -->
 
 	$: currentDate = $date.toLocaleDateString('sv-SE');
 
-    var macros;
+	var macros;
 	var items = [];
 
 	onMount(async () => {
@@ -20,12 +20,15 @@ Date: 19.1.2023 -->
 </script>
 
 <div>
-	<div class="text-xl font-black">Macros</div>
-		{#if items}
-            {#each items as item}
-                {#if item.date == currentDate}
-                    <MacroList {item} />
-                {/if}
-            {/each}
-		{/if}
+	<span class="text-xl font-black">Macros</span>
+	<button class="material-symbols-outlined" on:click={() => (location.href = '/dashboard/macros')}>
+		edit
+	</button>
+	{#if items}
+		{#each items as item}
+			{#if item.date == currentDate}
+				<MacroList {item} />
+			{/if}
+		{/each}
+	{/if}
 </div>

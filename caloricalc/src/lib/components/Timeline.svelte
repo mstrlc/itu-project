@@ -23,17 +23,15 @@ Date: 17.12.2023 -->
 	});
 </script>
 
-<p>{currentDate}</p>
-
 <div>
 	<div class="text-xl font-black">Timeline</div>
-		{#if items}
-			<ul class="timeline timeline-vertical">
-				{#each items as item}
-					{#if item.time.split('T')[0] == currentDate}
-						<TimelineItem {item} />
-					{/if}
-				{/each}
-			</ul>
-		{/if}
+	{#if items}
+		<ul class="timeline timeline-vertical">
+			{#each items as item}
+				{#if item.time.split('T')[0] == currentDate}
+					<TimelineItem {item} />
+				{/if}
+			{/each}
+		</ul>
+	{/if}
 </div>

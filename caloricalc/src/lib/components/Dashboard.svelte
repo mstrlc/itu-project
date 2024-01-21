@@ -34,11 +34,13 @@ Date: 17.12.2023 -->
 <button on:click={dayMinus} class="btn">&larr;</button>
 <button on:click={dayPlus} class="btn">&rarr;</button>
 
+<p>{$date.toLocaleDateString('sv-SE')}</p>
+
 <div class="flex">
 	<div class="w-1/3">
-		<Timeline {date}/>
+		<Timeline {date} />
 	</div>
 	<div class="w-2/3">
-		<Macros {date}/>
+		<Macros {date} />
 	</div>
 </div>
