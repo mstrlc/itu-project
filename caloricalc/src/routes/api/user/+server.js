@@ -33,17 +33,8 @@ export async function POST({ request }) {
 
 export async function PUT({ request }) {
     const data = await request.json();
-    let id = parseInt(data.id);
-    let users = await loadUsers();
-    let user = users.find(user => user.id == parseInt(id));
-    user.name = data.name;
-    user.portions = data.portions;
-    user.foods = data.foods || [];
-    user.users = data.users || [];
-    user.filters = data.filters || [];
-    user.goals = data.goals || [];
-    await saveUsers(users);
-    return json(users);
+    await saveUsers(data);
+    return json(data);
 }
 
 async function loadUsers() {
@@ -56,7 +47,7 @@ async function loadUsers() {
     }
 }
 
-async function saveUsers    (user) {
+async function saveUsers(user) {
     try {
         await fs.writeFile(userFilePath, JSON.stringify(user, null, 2), 'utf-8');
     } catch (error) {
