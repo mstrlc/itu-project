@@ -31,7 +31,35 @@ export async function getUserFilters() {
         }
     });
     let user = await response.json();
-    return await user.filters;
+    return await user[0].filters;
+}
+
+export async function editUserGoals(goals) {
+    var user = await getUser();
+    user[0].goals = goals;
+    const response = await fetch('/api/user', {
+        method: 'PUT',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    });
+
+    return await response.json();
+}
+
+export async function editUserFilters(filters) {
+    var user = await getUser();
+    user[0].filters = filters;
+    const response = await fetch('/api/user', {
+        method: 'PUT',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    });
+
+    return await response.json();
 }
 
 export async function editUser(name, birthday, weight, height, sex) {
