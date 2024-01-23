@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Bing chilling",
+    "name": "Gym lifting",
     "location": "49.2145000N, 16.6075053E",
     "time": "2024-01-09T17:54:46",
     "end": "2024-01-09T18:49:45",
@@ -70,14 +70,5 @@
     "end": "2024-01-10T19:00:00",
     "type": "dance",
     "calories": 400
-  },
-  {
-    "id": 9,
-    "name": "itu",
-    "location": "",
-    "time": "2024-01-10T18:17",
-    "end": "",
-    "type": "walk",
-    "calories": 0
   }
 ]

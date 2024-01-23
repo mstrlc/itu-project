@@ -1,38 +1,40 @@
 [
-  {
-    "name": "John Doe",
-    "birthday": "1990-08-24",
-    "weight": [
-      {
-        "date": "2023-09-01",
-        "weight": "86"
-      },
-      {
-        "date": "2023-10-01",
-        "weight": "88"
-      },
-      {
-        "date": "2023-11-01",
-        "weight": "89"
-      }
-    ],
-    "height": 189,
-    "sex": "male"
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "birthday": "2023-17-12",
-    "weight": "115",
-    "height": "200",
-    "sex": "helicopter"
-  },
-  {
-    "id": 3,
-    "name": "Max",
-    "birthday": "2023-17-12",
-    "weight": "115",
-    "height": "200",
-    "sex": "helicopter"
-  }
+	{
+		"name": "John Doe",
+		"birthday": "1990-08-24",
+		"weight": [
+			{
+				"date": "2023-09-01",
+				"weight": "86"
+			},
+			{
+				"date": "2023-10-01",
+				"weight": "88"
+			},
+			{
+				"date": "2023-11-01",
+				"weight": "89"
+			}
+		],
+		"height": 189,
+		"sex": "male",
+		"goals": {
+			"calories": 2200,
+			"proteins": 100,
+			"carbohydrates": 250,
+			"fats": 70,
+			"fiber": 30,
+			"sugars": 40,
+			"salt": 2.0
+		},
+		"filters": {
+			"calories": true,
+			"proteins": true,
+			"carbohydrates": false,
+			"fats": true,
+			"fiber": true,
+			"sugars": false,
+			"salt": false
+		}
+	}
 ]

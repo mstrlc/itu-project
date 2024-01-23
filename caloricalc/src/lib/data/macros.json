@@ -1,0 +1,24 @@
+[
+	{
+		"id": 1,
+		"date": "2024-01-17",
+		"calories": 1800,
+		"proteins": 80,
+		"carbohydrates": 200,
+		"fats": 60,
+		"fiber": 25,
+		"sugars": 30,
+		"salt": 2.5
+	},
+	{
+		"id": 2,
+		"date": "2024-01-18",
+		"calories": 2000,
+		"proteins": 85,
+		"carbohydrates": 180,
+		"fats": 70,
+		"fiber": 20,
+		"sugars": 25,
+		"salt": 2.2
+	}
+]
